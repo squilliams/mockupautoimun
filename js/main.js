@@ -22,9 +22,14 @@ jQuery(document).ready(function() {
     });
     
     // Init Skrollr
-    skrollr.init({
-		smoothScrolling: false,
-		mobileDeceleration: 0.004
+    var s = skrollr.init({
+      smoothScrolling: false,
+      mobileDeceleration: 0.004, 
+    });
+    
+    $('.main-menu a').click(function(){
+      $.scrollTo( this.hash, 1500, { easing:'swing' });
+      return false;
     });
 });
 

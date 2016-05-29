@@ -47,6 +47,7 @@
     <script src="js/libs/jquery.waypoints.min.js"></script>
     <script src='js/libs/waypoints.min.js'></script>
     <script src="js/libs/skrollr.js"></script>
+    <script src="js/libs/jquery.scrollTo.min.js"></script>
 </head>
 
 <body> <!--/body> class="home page page-id-17 page-template page-template-page-home page-template-page-home-php"-->
@@ -94,19 +95,19 @@
                     ======================================================================== --> 
                     <ul id="menu-res" class="main-menu">
                         <li id="menu-item-6" class="menu-item menu-item-6">
-                            <a href="#home">OVERVIEW</a>
+                            <a href="#overview">OVERVIEW</a>
                         </li>
                         <li id="menu-item-184" class="menu-item menu-item-184">
-                            <a href="#services">AUTOIMUN A-Z</a>
+                            <a href="#az">AUTOIMUN A-Z</a>
                         </li>
                         <li id="menu-item-8" class="menu-item menu-item-8">
-                            <a href="#about">MEET COMMUNITY</a>
+                            <a href="#community">MEET COMMUNITY</a>
                         </li>
                         <li id="menu-item-78" class="menu-item menu-item-78">
-                            <a href="#skills">FACTS & TIPS</a>
+                            <a href="#tips">FACTS & TIPS</a>
                         </li>
                         <li id="menu-item-9" class="menu-item menu-item-9">
-                            <a href="#our-team">ENGLISH</a>
+                            <a href="#">ENGLISH</a>
                         </li>
                     </ul>
 
@@ -133,78 +134,73 @@
         	</div>
         </header>
 	<!-- Header / End -->
-    <div class="section section-1" 
-         data-anchor-target="#section-1 + .gap" 
-         data-bottom-top="transform:translate3d(0px, 200%, 0px)" 
-         data-top-bottom="transform:translate3d(0px, 0%, 0px)">
-      <div class="image" 
-           data-anchor-target="#section-1 + .gap" 
-           data-bottom-top="transform: translate3d(0px, -80%, 0px);" 
-           data-top-bottom="transform: translate3d(0px, 80%, 0px);"></div>
-    </div>
-    <div class="section section-2" 
-         data-anchor-target="#section-2 + .gap" 
-         data-bottom-top="transform:translate3d(0px, 200%, 0px)" 
-         data-top-bottom="transform:translate3d(0px, 0%, 0px)">
-      <div class="image" 
-           data-anchor-target="#section-2 + .gap" 
-           data-bottom-top="transform: translate3d(0px, -80%, 0px);" 
-           data-top-bottom="transform: translate3d(0px, 80%, 0px);"></div>
-    </div>
-    <div class="section section-3" 
-         data-anchor-target="#section-3 + .gap" 
-         data-bottom-top="transform:translate3d(0px, 300%, 0px)" 
-         data-top-bottom="transform:translate3d(0px, 0%, 0px)">
-      <div class="image" 
-           data-anchor-target="#section-3 + .gap" 
-           data-bottom-top="transform: translate3d(0px, -60%, 0px);" 
-           data-top-bottom="transform: translate3d(0px, 60%, 0px);"></div>
-    </div>
-    <div id="skrollr-body">
-      <div id="section-1">
-        <div class="">
-            <img src="img/overview.jpg" style="display:block;">
+    	<div
+		class="parallax-image-wrapper parallax-image-wrapper-100"
+		data-anchor-target="#overview + .gap"
+		data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+		data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+
+		<div
+			class="parallax-image parallax-image-100"
+			style="background-image:url(img/landing-page.jpg)"
+			data-anchor-target="#dragons + .gap"
+			data-bottom-top="transform: translate3d(0px, -80%, 0px);"
+			data-top-bottom="transform: translate3d(0px, 80%, 0px);"
+		></div>
+		<!--the +/-80% translation can be adjusted to control the speed difference of the image-->
+	</div>
+
+	<div
+		class="parallax-image-wrapper parallax-image-wrapper-100"
+		data-anchor-target="#bacons + .gap"
+		data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+		data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+
+		<div
+			class="parallax-image parallax-image-100"
+			style="background-image:url(img/landing-page.jpg)"
+			data-anchor-target="#bacons + .gap"
+			data-bottom-top="transform: translate3d(0px, -80%, 0px);"
+			data-top-bottom="transform: translate3d(0px, 80%, 0px);"
+		></div>
+	</div>
+
+	<div
+		class="parallax-image-wrapper parallax-image-wrapper-50"
+		data-anchor-target="#kittens + .gap"
+		data-bottom-top="transform:translate3d(0px, 300%, 0px)"
+		data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+
+		<div
+			class="parallax-image parallax-image-50"
+			style="background-image:url(img/landing-page.jpg)"
+			data-anchor-target="#kittens + .gap"
+			data-bottom-top="transform: translate3d(0px, -60%, 0px);"
+			data-top-bottom="transform: translate3d(0px, 60%, 0px);"
+		></div>
+	</div>
+
+	<div id="skrollr-body">
+		<div class="header" id="overview">
+            <img src="img/overview.jpg">
         </div>
-      </div>
-      <div class="gap gap-100" style="background-image:url(img/landing-page.jpg);"></div>
-      <div id="section-2">
-        <div class="">
-          <h2>
-            Section 2
-          </h2>
-          <p>
-            Landjaeger chicken ham fatback sausage hamburger, tri-tip capicola pastrami pancetta ribeye turducken. Rump shank turkey pig kevin sausage meatloaf tenderloin drumstick short ribs short loin. Prosciutto spare ribs chuck, pork strip steak pork chop swine bacon turkey shoulder andouille. Jowl landjaeger chicken corned beef. Ham hock kielbasa pancetta ground round sausage. Spare ribs porchetta pastrami filet mignon drumstick ball tip. Beef ribs prosciutto kevin, landjaeger shoulder ham hock ham brisket sirloin chuck t-bone drumstick kielbasa pork chop.
-          </p>
-          <p>
-            Landjaeger spare ribs chicken ball tip, filet mignon frankfurter ribeye tenderloin corned beef. Strip steak boudin pork loin, chicken turkey ball tip beef ribs ground round shank ham hock. Kevin capicola beef, chuck pork chop shoulder brisket doner meatloaf shank ham hock tenderloin. Chuck ham hock short ribs ground round sausage prosciutto shoulder bacon andouille tri-tip beef biltong filet mignon chicken. Pork belly andouille shank, bacon sausage meatloaf bresaola pork chop short ribs t-bone. Ham hock salami porchetta bacon beef turkey, strip steak kielbasa pancetta brisket meatball t-bone.
-          </p>
-          <p>
-            Chicken pancetta capicola chuck, turkey meatball jerky frankfurter kielbasa ball tip bacon ground round. Beef ribs brisket meatloaf short ribs landjaeger shankle spare ribs sausage, pancetta swine sirloin flank. Tail shank chuck pancetta, ham meatloaf short ribs sausage rump turkey kevin pork chop landjaeger. Doner boudin short ribs t-bone, jerky shankle bresaola drumstick. Strip steak shank spare ribs boudin doner short ribs. Boudin prosciutto jowl tenderloin tongue beef ribs, short ribs salami short loin strip steak ham jerky. Shank pancetta beef ribs, corned beef ham hock pork belly drumstick tail bresaola chuck.
-          </p>
-        </div>
-      </div>
-      <div class="gap gap-100" style="background-image:url(img/landing-page.jpg);"></div>
-      <div id="section-3">
-        <div class="container">
-          <h2>
-            Section 3
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae unde quasi expedita molestiae vero tempore voluptatum nemo possimus natus ad ducimus ex inventore dolor, nihil omnis iste, blanditiis, reiciendis ipsa!
-          </p>
-          <p>
-            Duis nec placerat enim. Pellentesque dolor mi, lacinia sed blandit vitae, volutpat ut eros. Integer non purus urna. Suspendisse quis ex diam. Aliquam rhoncus et erat id eleifend. Morbi rutrum vulputate pharetra. Proin vehicula, enim non mattis fermentum, augue nibh pharetra risus, in blandit quam metus venenatis metus.
-          </p>
-          <p>
-            In auctor tempor arcu, nec viverra nulla rhoncus ac. Vestibulum diam tortor, placerat vel congue at, accumsan quis diam. Pellentesque nec pretium libero. Etiam vel nisi tincidunt, luctus massa at, vestibulum felis. Sed at ligula felis. Fusce risus neque, dignissim imperdiet scelerisque vestibulum, rhoncus non mauris. Donec ut dolor nec tortor laoreet mollis. In ac neque finibus, vulputate odio eget, lobortis neque. Proin et facilisis mauris. Sed id porta sem, ut blandit libero. Vestibulum molestie ante non tristique rhoncus. Donec facilisis nulla nec tellus pellentesque, eu dapibus odio varius. Vestibulum at elit eget nisl elementum egestas. Integer commodo diam et urna hendrerit sodales. Maecenas porttitor, justo vitae rutrum faucibus, risus orci efficitur arcu, eget eleifend sem justo in elit. Nunc a placerat ipsum.
-          </p>
-          <p>
-            Duis rhoncus tristique sapien, id iaculis massa vestibulum eu. Sed blandit tortor non interdum rutrum. Sed accumsan, felis eget varius egestas, sem neque hendrerit arcu, vitae fringilla lorem augue ut dui. Integer ut ullamcorper leo. Aliquam odio metus, pharetra eget nisl eget, porta fringilla nisi. Quisque tincidunt ex ex, vel sodales massa egestas vel. Suspendisse facilisis arcu eu fermentum auctor. Fusce finibus maximus leo in ultricies.
-          </p>
-        </div>
-      </div>
-      <div class="gap gap-50" style="background-image:url(img/landing-page.jpg);"></div>
-    </div>
+		<div class="gap gap-100" style="background-image:url(img/landing-page.jpg);"></div>
+		<div class="content" id="bacons">
+			<p>Landjaeger chicken ham fatback sausage hamburger, tri-tip capicola pastrami pancetta ribeye turducken. Rump shank turkey pig kevin sausage meatloaf tenderloin drumstick short ribs short loin. Prosciutto spare ribs chuck, pork strip steak pork chop swine bacon turkey shoulder andouille. Jowl landjaeger chicken corned beef. Ham hock kielbasa pancetta ground round sausage. Spare ribs porchetta pastrami filet mignon drumstick ball tip. Beef ribs prosciutto kevin, landjaeger shoulder ham hock ham brisket sirloin chuck t-bone drumstick kielbasa pork chop.</p>
+
+			<p>Landjaeger spare ribs chicken ball tip, filet mignon frankfurter ribeye tenderloin corned beef. Strip steak boudin pork loin, chicken turkey ball tip beef ribs ground round shank ham hock. Kevin capicola beef, chuck pork chop shoulder brisket doner meatloaf shank ham hock tenderloin. Chuck ham hock short ribs ground round sausage prosciutto shoulder bacon andouille tri-tip beef biltong filet mignon chicken. Pork belly andouille shank, bacon sausage meatloaf bresaola pork chop short ribs t-bone. Ham hock salami porchetta bacon beef turkey, strip steak kielbasa pancetta brisket meatball t-bone.</p>
+
+			<p>Chicken pancetta capicola chuck, turkey meatball jerky frankfurter kielbasa ball tip bacon ground round. Beef ribs brisket meatloaf short ribs landjaeger shankle spare ribs sausage, pancetta swine sirloin flank. Tail shank chuck pancetta, ham meatloaf short ribs sausage rump turkey kevin pork chop landjaeger. Doner boudin short ribs t-bone, jerky shankle bresaola drumstick. Strip steak shank spare ribs boudin doner short ribs. Boudin prosciutto jowl tenderloin tongue beef ribs, short ribs salami short loin strip steak ham jerky. Shank pancetta beef ribs, corned beef ham hock pork belly drumstick tail bresaola chuck.</p>
+		</div>
+		<div class="gap gap-100" style="background-image:url(img/landing-page.jpg);"></div>
+		<div class="content content-full" id="kittens">
+			Here be kittens
+		</div>
+		<div class="gap gap-50" style="background-image:url(img/landing-page.jpg);"></div>
+		<div class="content" id="done">
+			Images from <a href="http://placekitten.com/attribution.html">http://placekitten.com/</a>, thanks!
+		</div>
+	</div>
     <div class="more"></div>
 
 <script src='js/libs/bootstrap.min.js'></script>
@@ -222,8 +218,7 @@
 <script src='js/libs/jquery.magnific-popup.min.js'></script>
 <script src="js/libs/jquery.waypoints.min.js"></script>
 <script src='js/main.js'></script>
-<script src='js/script.js'></script>
-<script src="js/libs/skrollr.js"></script>
+<script src="js/libs/skrollr.min.js"></script>
 
 </body>
 </html>
