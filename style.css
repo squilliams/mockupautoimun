@@ -1,14 +1,3 @@
-/*
-Theme Name: OneEngine
-Theme URI: http://www.enginethemes.com/themes/oneengine
-Author: EngineThemes Team
-Author URI: http://www.enginethemes.com
-Description: a free WordPress one-page theme, built with simplicity in mind and optimized for better user interactions
-Version: 1.1
-Tags: fluid-layout, responsive-layout, accessibility-ready, translation-ready
-License: GNU General Public License v3
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
-*/
 @CHARSET "ISO-8859-1";
 
 /* ---------------------------------------- */
@@ -556,8 +545,13 @@ header{
 	        transition: all 0.5s ease;
 }
 
-.main-menu-top .main-menu li a:hover, .main-menu-top .main-menu li a.active{
+.main-menu-top .main-menu li a:hover{
 	background-color:#f33283;
+    color: white;
+}
+
+.main-menu-top .main-menu li .selected{
+    background-color:#f33283!important;
     color: white;
 }
 .main-menu-top .main-menu li a, .main-menu-top .main-menu li .menu-item a{
@@ -589,6 +583,11 @@ nav ul {
 
 nav li {
     display: inline-block;
+}
+
+nav li a selected {
+	background-color:#f33283;
+    color: white;
 }
 /*
  ---------------
@@ -680,9 +679,7 @@ nav li {
 	#done {
 		height:100%;
 	}
-
-
-}/* --------- LOGO -------- */
+/* --------- LOGO -------- */
 .logo{
 	position:relative;
     padding-bottom: 0;
