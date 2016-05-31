@@ -27,7 +27,7 @@ jQuery(document).ready(function() {
     handler: function(event, direction) {
         li.toggleClass('current')
     }
-    });
+    }, {offset: '100%'});
     // Init Skrollr
     var s = skrollr.init({
       smoothScrolling: false,
@@ -69,9 +69,17 @@ jQuery(document).ready(function() {
 
     $("nav a").click(function(evn){
         evn.preventDefault();
-        $('html,body').scrollTo(this.hash, 700); 
+        $('html,body').scrollTo(this.hash, 500); 
+    });
+    $("#home.landing-page a").click(function(evn){
+        evn.preventDefault();
+        $('html,body').scrollTo(this.hash, 1000); 
     });
     
+    $('.bxslider').bxSlider({
+        auto:true
+    });   
+        
 });
 
 (function(){

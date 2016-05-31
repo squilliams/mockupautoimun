@@ -29,6 +29,7 @@
 	<![endif]-->
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Fira+Sans' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' id='carousel-style-css'  href='css/owl.carousel.css' type='text/css' media='all' />
     <link rel='stylesheet' id='bootstrap-style-css'  href='css/bootstrap.css' type='text/css' media='all' />
     <link rel='stylesheet' id='animate-css'  href='css/animate.css' type='text/css' media='all' />
@@ -37,9 +38,13 @@
     <link rel='stylesheet' id='magnific-popup-css'  href='css/magnific-popup.css' type='text/css' media='all' />
     <link rel='stylesheet' id='main-style-css'  href='style.css' type='text/css' media='all' />
     <link rel='stylesheet' id='custom-css'  href='css/custom-css.php' type='text/css' media='all' />
+    <link href="css/jquery.bxslider.css" rel="stylesheet" />
+    
+    <script src="js/libs/jquery.bxslider.min.js"></script>
     <meta name="generator" content="WordPress 4.5.2" />
     
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>     
+<!--     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>  -->
+    <script src="js/jquery.js"></script>
     <script>
         $(document).ready(function () {
             $('.sticky-navigation').waypoint('sticky');
@@ -49,28 +54,23 @@
     <script src='js/libs/waypoints.min.js'></script>
     <script src="js/libs/skrollr.js"></script>
     <script src="js/libs/jquery.waypoints.min.js"></script>
+    <script src='js/libs/owl.carousel.min.js'></script>
+
 </head>
 
 <body> <!--/body> class="home page page-id-17 page-template page-template-page-home page-template-page-home-php"-->
     
-	<!-- Preloading
-    ======================================================================== -->
-<!--
-	<div class="mask-color">
-        <div id="preview-area">
-            <div class="spinner">
-              <div class="dot1"></div>
-              <div class="dot2"></div>
-            </div>
+        <!-- Landing Page ======================================================================== -->
+    <div id="home">
+        <div id="landing-page">
+            <img src="img/awan-atas.png" id="awanatas">
+            <img src="img/gedung.png" id="gedung">
+            <a href ="#overview"><img src="img/overviewbutton.png" id="ovbutton"></a>
+            <img src="img/logo-autoimun-ungu.png" id="logo-landing">
+            <img src="img/bayangan-gedung.png" id="bayangan-gedung">
+            <img src="img/awan-bawah.png" id="awan-bawah">
         </div>
     </div>
--->
-	<!-- Preloading / End -->
-        <!-- Landing Page ======================================================================== -->
-    <div id="landing-page">
-        <!--img src="img/landing-page.jpg" width="100%"-->
-    </div>
-    <!-- Slider / End -->
     
     <!-- Header
     ======================================================================== -->
@@ -83,7 +83,7 @@
                     ======================================================================== -->
                     <div class="logo-wrapper">
                         <div class="logo">
-                            <a href="#">
+                            <a href="#home">
                                 <div class="logo-img"><img src="img/logo-nav.png"></div>
                             </a>
                         </div>  
@@ -180,106 +180,198 @@
 			data-top-bottom="transform: translate3d(0px, 60%, 0px);"
 		></div>
 	</div>
+    <div
+            class="parallax-image-wrapper parallax-image-wrapper-50"
+            data-anchor-target="#tips + .gap"
+            data-bottom-top="transform:translate3d(0px, 300%, 0px)"
+            data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+
+            <div
+                class="parallax-image parallax-image-50"
+                style="background-image:url(img/asset-lanscape-bdg_2.png)"
+                data-anchor-target="#tips + .gap"
+                data-bottom-top="transform: translate3d(0px, -60%, 0px);"
+                data-top-bottom="transform: translate3d(0px, 60%, 0px);"
+            ></div>
+        </div>
 
 	<div id="skrollr-body">
 		<section class="content" id="overview">
             <div class="content-container">
-                <img src="img/overview.jpg">
+                <img src="img/overview.jpg" style="width:100%">
             </div>
         </section>
-		<div class="gap gap-100" style="background-image:url(img/landing-page.jpg);"></div>
+		<div class="gap gap-50" style="background-image:url(img/landing-page.jpg);"></div>
 		<section class="content" id="az">
             <div class="accordion-container">
-                <h1>AUTOIMUN A-Z</h1>
                 <div class="accordion">
                 <dl>
-                  <dt>
-                    <a href="#accordion1" aria-expanded="false" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger">Antiphoslipid Antybody Syndrom (APS)</a>
-                  </dt>
-                  <dd class="accordion-content accordionItem is-collapsed" id="accordion1" aria-hidden="true">
-                    <p>Lorem ipsum dolor sit amet, consectetur <a href="http://www.google.com">Test</a>adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. </p>
-                    <p>Aliquam dapibus, ante quis fringilla feugiat, mauris risus condimentum massa, at elementum libero quam ac ligula. Pellentesque at rhoncus dolor. Duis porttitor nibh ut lobortis aliquam. Nullam eu dolor venenatis mauris placerat tristique eget id dolor. Quisque blandit adipiscing erat vitae dapibus. Nulla aliquam magna nec elementum tincidunt.</p>
-                  </dd>
-                  <dt>
-                    <a href="#accordion2" aria-expanded="false" aria-controls="accordion2" class="accordion-title accordionTitle js-accordionTrigger">
-                      Diabetes Melitus Tipe 1</a>
-                  </dt>
-                  <dd class="accordion-content accordionItem is-collapsed" id="accordion2" aria-hidden="true">
-                    <p>Diabetes melitus tipe 1 merupakan penyakit autoimun dimana sistem pertahanan tubuh menyerang dan merusak sel-sel yang memproduksi hormon insulin sehingga pankreas tidak dapat memproduksi hormon tersebut. Padahal insulin dibutuhkan untuk mengendalikan kadar gula dalam darah dengan cara membantu glukosa masuk ke sel-sel tubuh sehingga dapat digunakan sebagai energi untuk beraktivitas</p>
-                    <p>Diabetes Melitus di tahun 1900-an tak terlalu jelas disebut dalam 10 besar penyakit mematikan, tahun 2000-an jadi penyakit mematikan keenam. Pada 2014 menduduki peringkat ketiga [CNN Indonesia - Badan Penelitian dan Pengembangan Kesehatan (Balitbangkes)]</p>                   
-                      <p><img src="img/az.jpg"></p>
-                      
-                      <h4>Di Indonesia Penyakit lupus dikenal pula sebagai penyakit autoimmune padahal lupus hanya salah satu jenis dari autoimun. </h4>
-                  </dd>
-                  <dt>
-                    <a href="#accordion4" aria-expanded="false" aria-controls="accordion4" class="accordion-title accordionTitle js-accordionTrigger">
-                      Hepatitis Autoimun
-                    </a>
-                  </dt>
-                  <dd class="accordion-content accordionItem is-collapsed" id="accordion4" aria-hidden="true">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. </p>
-                  </dd>
-                <dt>
-                    <a href="#accordion5" aria-expanded="false" aria-controls="accordion5" class="accordion-title accordionTitle js-accordionTrigger">
-                      Miasthenia gravis
-                    </a>
-                  </dt>
-                  <dd class="accordion-content accordionItem is-collapsed" id="accordion5" aria-hidden="true">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. </p>
-                  </dd>
                     <dt>
+                    <a href="#accordion1" aria-expanded="false" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger">Penyakit Autoimun yang mencederai darah</a>
+                    </dt>
+                    <dd class="accordion-content accordionItem is-collapsed" id="accordion1" aria-hidden="true">
+                        <div class="accordion-child">
+                    <dl>
+                      <dt>
+                        <a href="#accordion2" aria-expanded="false" aria-controls="accordion2" class="accordion-title accordionchildTitle js-accordionTrigger">Lupus</a>
+                      </dt>
+                      <dd class="accordion-content accordionItem is-collapsed" id="accordion2" aria-hidden="true">
+                    <p>
+                        Lupus Eritematosus Sistemik (LES) atau biasa kita sebut dengan lupus saja. Penyakit ini menyebabkan seseorang mengembangkan antibodi yang justru menyerang hampir ke seluruh jaringan tubuh. Beberapa bagian tubuh yang paling sering diserang adalah sendi, paru-paru, ginjal, dan jaringan saraf. Untuk mengobati lupus, dokter biasanya memberikan obat steroid minum untuk menurunkan fungsi imun.</p>
+                          <p>
+Sering disebut juga sebagai “penyakit seribu wajah” karena keterlibatan organ yang beragam dan gejala yang sangat bervariasi. Gejala konstitusional yang merupakan manifestasi sistemik dari LES termasuk demam, penurunan berat badan, kelelahan (fatigue), anoreksia, dan nyeri sendi. 
+                          </p>
+                          <p>
+Gejala hallmark dari LES adalah ruam malar atau ruam pada wajah yang menimbul dan tidak gatal pada pipi hingga telinga, melewati hidung namun tidak mengenai lipatan nasolabial sehingga berbentuk seperti kupu-kupu.  
+                    </p>
+                    <p><img src="img/az.jpg"></p>
+
+                          <h4>Di Indonesia Penyakit lupus dikenal pula sebagai penyakit autoimmune padahal lupus hanya salah satu jenis dari autoimun. </h4>
+
+                      </dd>
+                      <dt>
+                        <a href="#accordion3" aria-expanded="false" aria-controls="accordion3" class="accordion-title accordionchildTitle js-accordionTrigger">
+                          Antiphospholipid antibody syndrome (APS)</a>
+                      </dt>
+                      <dd class="accordion-content accordionItem is-collapsed" id="accordion3" aria-hidden="true">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. </p>
+                      </dd>
+                      <dt>
+                        <a href="#accordion4" aria-expanded="false" aria-controls="accordion4" class="accordion-title accordionchildTitle js-accordionTrigger">
+                            Vaskulitis
+                        </a>
+                      </dt>
+                      <dd class="accordion-content accordionItem is-collapsed" id="accordion4" aria-hidden="true">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. </p>
+                      </dd>
+                        <dt>
+                        <a href="#accordion5" aria-expanded="false" aria-controls="accordion5" class="accordion-title accordionchildTitle js-accordionTrigger">
+                            Autoimmune hemolytic anemia (AHA)
+                            </a>
+                        </dt>
+                        <dd class="accordion-content accordionItem is-collapsed" id="accordion5" aria-hidden="true">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. </p>
+                        </dd>
+                        </dl>
+                    </div>
+                </dd>
+                <dt>
                     <a href="#accordion6" aria-expanded="false" aria-controls="accordion6" class="accordion-title accordionTitle js-accordionTrigger">
-                      Vaskulitis
-                    </a>
-                  </dt>
-                  <dd class="accordion-content accordionItem is-collapsed" id="accordion6" aria-hidden="true">
+                      Penyait Autoimun pada kulit</a>
+                </dt>
+                <dd class="accordion-content accordionItem is-collapsed" id="accordion6" aria-hidden="true">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. </p>
-                  </dd>
+                </dd>
                 <dt>
                     <a href="#accordion7" aria-expanded="false" aria-controls="accordion7" class="accordion-title accordionTitle js-accordionTrigger">
-                      Tiroiditis Hashimoto
-                    </a>
+                      Penyait Autoimun golongan gastrointestinal</a>
                 </dt>
-                  <dd class="accordion-content accordionItem is-collapsed" id="accordion7" aria-hidden="true">
+                <dd class="accordion-content accordionItem is-collapsed" id="accordion7" aria-hidden="true">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. </p>
-                  </dd>
+                </dd>
+                <dt>
+                    <a href="#accordion8" aria-expanded="false" aria-controls="accordion8" class="accordion-title accordionTitle js-accordionTrigger">
+                      Penyait Autoimun pada sendi, otot dan saraf</a>
+                </dt>
+                <dd class="accordion-content accordionItem is-collapsed" id="accordion8" aria-hidden="true">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. </p>
+                </dd>
+                <dt>
+                    <a href="#accordion9" aria-expanded="false" aria-controls="accordion9" class="accordion-title accordionTitle js-accordionTrigger">
+                      Penyait Autoimun yang hanya menyerang satu organ</a>
+                </dt>
+                <dd class="accordion-content accordionItem is-collapsed" id="accordion9" aria-hidden="true">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. </p>
+                </dd>
                 </dl>
-              </div>
-            </div>
-			
-		</section>
-		<div class="gap gap-100" style="background-image:url(img/landing-page.jpg);"></div>
-		<section class="content" id="community">
-            <div class="content-container">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. </p>
-
+                </div>
+                <h1>Mari Berkenalan dengan macam-macam penyakit Autoimun</h1>
+                <h4>Makin cepat diketahui penyakitnya, maka makin besar kemungkinan untuk bisa dikontrol dan diminimalisir dampaknya</h4>
             </div>
 		</section>
 		<div class="gap gap-50" style="background-image:url(img/landing-page.jpg);"></div>
-		<section class="content content-full" id="tips">
+		<section class="content content-more" id="community">
             <div class="content-container">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. </p>
+                <div class="image-container">
+                    <img src="img/community-top.png" style="width:100%">
+                </div>
 
-            </div>        
+                <div class="carousel-container">
+                    <ul class="bxslider">
+                      <li><div class="bximage"><img src="img/syamsiduha.png" /></div></li>
+                      <li><div class="bximage"><img src="img/syamsiduha.png" /></div></li>
+                      <li><div class="bximage"><img src="img/syamsiduha.png" /></div></li>
+                    </ul>
+                </div>
+            </div>
 		</section>
+		<div class="gap gap-150" style="background-image:url(img/landing-page.jpg);"></div>
+		<section class="content" id="tips">
+            <div class="content-container">
+                <div id ="faktakiri">
+                    <h2>FACTS</h2>
+                    <p>Seberapa tahukah kamu dengan autoimun? </p>
+                    <p>yuk intip fakta-fakta autoimun yang belum banyak diketahui orang</p>
+                </div>
+                <div id ="tipskanan">
+                    <h2>TIPS</h2>
+                    <p>Dapatkan tips - tips menarik seputar</p>
+                    <p>pola hidup sehat dengan cara penangaanan terhadap penyakit autoimun</p>
+                </div>
+                <div class="image-container">
+                    <img src="img/fakta-top.png" style="width:100%">
+                </div>
+                <div class="main-tab">
+  
+                  <input id="tab1" type="radio" name="tabs" checked>
+                  <label for="tab1">FACTS</label>
+
+                    <input id="tab2" type="radio" name="tabs">
+                    <label for="tab2">TIPS</label>
+
+                    <div class="content-tab">  
+                        <div id="content1">
+                        <p>
+                            Tahukah bahwa 9 dari 10 pengidap autoimun adalah perempuan, karena perempuan lebih rentan terhadap autoimun, karena nya perempuan harus lebih berhati-hati.</p>
+<p>
+    Pada kondisi mengidap penyakit autoimun, sel kekebalan tubuh tidak bisa lagi membedakan sel yang sehat dengan beragam bakteri dan virus yang menyerang tubuh. Antibodi justeru menyerang sel-sel yang masih berfungsi dan dibutuhkan oleh tubuh manusia .                     
+                        </p>
+                        <div class="image-container">
+                            <img src="img/9womens.png">
+                        </div>
+                          <h3>
+                            Di Indonesia Penyakit lupus dikenal pula sebagai penyakit autoimmune padahal lupus hanya salah satu jenis dari autoimun.
+                          </h3>
+                        </div>
+                      
+                        <div id="content2">
+                        <div class="image-container">
+                            <img src="img/tipsnya.png">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</section>
+        <div class="gap gap-50" style="background-image:url(img/asset-lanscape-bdg_2.png);"></div>
 	</div>
-    <div class="more"></div>
 
-<script src='js/libs/bootstrap.min.js'></script>
-<script src='js/libs/owl.carousel.min.js'></script>
-<script src='js/libs/jquery.slicknav.min.js'></script>
-<script src='js/libs/waypoints.min.js'></script>
-<script src='js/libs/jquery.easypiechart.min.js'></script>
-<script src='js/libs/counter.js'></script>
-<script src='js/libs/jquery.hoverdir.js?ver=1.1.0'></script>
-<script src='js/libs/classie.js?ver=1.1.0'></script>
-<script src='js/libs/jquery.easing.min.js'></script>
-<script src='js/libs/jquery.scrollTo.min.js'></script>
-<script src='js/libs/isotope.pkgd.min.js'></script>
-<script src='js/libs/jquery.magnific-popup.min.js'></script>
-<script src="js/libs/jquery.waypoints.min.js"></script>
-<script src='js/main.js'></script>
-<script src="js/libs/skrollr.min.js"></script>
-
+    <script src='js/libs/bootstrap.min.js'></script>
+    <script src='js/libs/modernizr.custom.js'></script>
+    <script src='js/libs/owl.carousel.min.js'></script>
+    <script src='js/libs/jquery.slicknav.min.js'></script>
+    <script src='js/libs/waypoints.min.js'></script>
+    <script src='js/libs/jquery.easypiechart.min.js'></script>
+    <script src='js/libs/counter.js'></script>
+    <script src='js/libs/jquery.hoverdir.js?ver=1.1.0'></script>
+    <script src='js/libs/classie.js?ver=1.1.0'></script>
+    <script src='js/libs/jquery.easing.min.js'></script>
+    <script src='js/libs/jquery.scrollTo.min.js'></script>
+    <script src='js/libs/isotope.pkgd.min.js'></script>
+    <script src='js/libs/jquery.magnific-popup.min.js'></script>
+    <script src="js/libs/jquery.waypoints.min.js"></script>
+    <script src='js/main.js'></script>
+    <script src="js/libs/skrollr.min.js"></script>
+    <script src="js/libs/jquery.bxslider.min.js"></script>
 </body>
 </html>

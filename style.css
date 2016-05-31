@@ -414,10 +414,9 @@ a#scroll_to {
 #landing-page{
     width: 100%;
     margin:0;
-    background-image: url("img/landing-page.jpg");
-    background-color: green;
-    height: 700px;
-
+    background-color: #96d7e1;
+    height: 650px;
+    z-index: 0;
 }
 
 .more {
@@ -433,6 +432,15 @@ div .wrapper{
   max-width:100%;
   margin:0 auto;
   padding:2em 0 0 0;
+}
+
+.content-container h1{
+    margin-left: 4em;
+}
+
+.image-container {
+    width:100%;
+    text-align: center;
 }
 
 /* ---------------------------------------- */
@@ -596,12 +604,164 @@ nav li a selected {
 	background-color:#f33283;
     color: white;
 }
+/*A N I M A T I O N*/
+
+#awanatas {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  z-index: 2;
+  
+  animation: move 3s ease infinite;
+}
+
+#awan-bawah {
+  position: absolute;
+  top: 300px;
+  left: 250px;
+  z-index: 2;
+}
+#awan-bawah:hover { 
+    animation: wobble 2s ease infinite;
+}
+#logo-landing{
+    
+    position: absolute;
+  top: 200px;
+  left: 500px;
+  z-index: 2;
+
+}
+#ovbutton{
+    position: absolute;
+    left: 650px;
+    top:622px;
+    z-index: 4;
+}
+#gedung {
+    position:relative;
+    top: 420px;
+    z-index: 3;
+}
+#gedung:hover{
+    animation: bounce 1s ease infinite;
+}
+#bayangan-gedung{
+    position:relative;
+    top: 180px;
+    z-index: 1;
+    width: 1315px;
+}
+@keyframes move {
+  50% {
+     transform: translate(50px, 0px);
+    -webkit-transform: translate(50px, 0px);
+  }
+}
+@keyframes bounce {
+ 50% {
+    transform: translate(0px, -10px);
+    -webkit-transform: translate(0px, -10px);
+ }
+    
+}
+
+@keyframes wobble {
+   0% { transform: translateX(0%); } 
+   15% { transform: translateX(-5%) rotate(-5deg); } 
+   30% { transform: translateX(3%) rotate(3deg); } 
+   45% { transform: translateX(-5%) rotate(-3deg); } 
+   60% { transform: translateX(3%) rotate(2deg); }
+   75% { transform: translateX(-5%) rotate(-1deg); }
+   100% { transform: translateX(0%); } 
+}
+/*
+
+TAB
+
+*/
+
+
+		*, *:before, *:after {margin: 0; padding: 0; box-sizing: border-box;}
+
+		.content-tab p {margin: 0 0 20px; line-height: 1.5;font-family: 'Fira Sans', sans-serif;text-align: center;}
+        .content-tab h3 {font-family: 'Fira Sans', sans-serif;text-align: center; color:#F63183;}
+
+		.main-tab {margin: 0 auto; min-width: 320px; max-width: 800px;}
+		.content-tab {background: #fff; color: #373737;}
+		.content-tab > div {display: none; padding: 20px 25px 5px;}
+        
+        #faktakiri{
+            position: absolute;
+            left: 100px;
+            z-index: 10;
+        }
+        #tipskanan{
+            position: absolute;
+            float: right;
+            text-align: right;
+            left: 800px;
+            z-index: 10;
+        }
+
+        #faktakiri h2, #tipskanan h2{
+            font-family: 'Fira Sans', sans-serif;
+            color:#f63183;
+
+        }
+
+        #faktakiri p, #tipskanan p{
+            font-family: 'Fira Sans', sans-serif;
+            color:#451166;
+        }
+        .content-tips .content, #tips .content-container {
+            padding: 0;
+        }
+
+        .content-tips{
+            padding:0;
+            height: 100%;
+        }
+        section #tips .content-container {
+            margin:0;
+            padding: 0;
+        }
+        section #tips image-container {
+            margin: 0;
+        }
+        
+		input {display: none;}
+		label {
+            display: inline-block; 
+            padding: 15px 25px; 
+            font-weight: 600; 
+            text-align: left;
+            background: #451166;
+            color: #fff;
+            margin:5px;
+            width:48%;
+            content: "" ;
+        }
+		label:hover {color: #fff; cursor: pointer;}
+		input:checked + label {background: #f63183; color: #fff;}
+
+		#tab1:checked ~ .content-tab #content1,
+		#tab2:checked ~ .content-tab #content2{
+		  display: block;
+		}
+		@media screen and (max-width: 400px) { label {padding: 15px 10px;} }
 
 /*
 ACCORDION 
 */
+
+#az h1, #az h4{
+    font-family: 'Fira Sans', sans-serif;
+    color:#f63183;
+    text-align: center;
+}
 .accordion-container {
-  max-width:960px;
+  max-width:700px;
   margin:0 auto;
   padding:2em 0 2em 0;
 }
@@ -611,27 +771,29 @@ ACCORDION
    border:1px solid #ddd;
 }
 
-   .accordion-list:after {
-       content: "";
-       display:block;
-       height:1em;
-       width:100%;
-       background-color:darken(#451166, 10%);
-     }
+.accordion-list:after {
+   content: "";
+   display:block;
+   height:1em;
+   width:100%;
+   background-color:darken(#451166, 10%);
+}
 
 .accordion dd,
+.accordion-child dd
 .accordion__panel {
    background-color:white;
    font-size:1em;
    line-height:1.5em; 
 }
-.accordion p, .accordion h4{
+.accordion p, .accordion-child p, .accordion-child h4, .accordion h4{
   padding:1em 2em 1em 2em;
 }
-.accordion h4{
+
+.accordion h4, .accordion-child h4{
     text-align: center;   
 }
-.accordion {
+.accordion, .accordion-child{
     position:relative;
     background-color:white;
 }
@@ -639,14 +801,43 @@ ACCORDION
 .accordionTitle:before{
     content: "+";
     color:#F63183;
-    font-size:1.5em;
+    font-size:3.5em;
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
    line-height:0.5em;
-   float:left; 
+   float:right; 
    transition: transform 0.3s ease-in-out;
 
 }
+
+.accordionchildTitle:before{
+    content: "+";
+    color:#451166;
+    font-size:3.5em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+   line-height:0.5em;
+   float:right; 
+   transition: transform 0.3s ease-in-out;
+
+}
+
+.accordionchildTitle:hover{
+    background-color:darken(#F63183, 10%);
+}
+.accordionchildTitle {
+ background-color:#F63183; 
+   text-align:center;
+     font-weight:700; 
+          padding:2em;
+          display:block;
+          text-decoration:none;
+          color:#fff;
+          transition:background-color 0.5s ease-in-out;
+    margin: 0.5em;
+  border-bottom:1px solid darken(#F63183, 5%);
+}
+
 .accordionTitle:hover{
     background-color:darken(#451166, 10%);
 }
@@ -661,14 +852,29 @@ ACCORDION
           text-decoration:none;
           color:#fff;
           transition:background-color 0.5s ease-in-out;
+    margin: 0.5em;
   border-bottom:1px solid darken(#451166, 5%);
 }
+
 .accordionTitleActive, 
 .accordionTitle.is-expanded {
    background-color:darken(#451166, 10%);
 }
 
+.accordionchildTitleActive, 
+.accordionchildTitle.is-expanded {
+   background-color:darken(#F63183, 10%);
+}
+
+.accordionchildTitle.is-expanded {
+   background-color:darken(#451166, 10%);
+}
+
 .accordionTitle.is-expanded:before{
+    transform:rotate(-225deg);
+}
+
+.accordionchildTitle.is-expanded:before{
     transform:rotate(-225deg);
 }
 
@@ -722,6 +928,19 @@ ACCORDION
        }
 }
 
+.carousel-container{
+    width: 90%;
+    margin: 0 auto;
+    left: 400px;
+}
+.carouselimgcont{
+    width: 90%;
+    margin: 0 auto;
+    left:400px;
+}
+.bximage{
+    margin: 0 auto;
+}
 /*
  ---------------
  P A R A L L A X
@@ -799,6 +1018,9 @@ ACCORDION
 	.gap-100 {
 		height:100%;
 	}
+	.gap-150 {
+		height:150%;
+	}
 	.header, .content {
 		background:#fff;
 		padding:1em;
@@ -806,9 +1028,16 @@ ACCORDION
 		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
+    .content{
+        height: auto;
+    }
 	.content-full {
 		height:100%;
 	}
+	.content-more {
+		height:150%;
+	}
+
 	#done {
 		height:100%;
 	}
